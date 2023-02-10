@@ -17,7 +17,7 @@ public class OptionsManager extends TestBase {
         options.addArguments("--disable-popup-blocking");
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--headless");
+//        options.addArguments("--headless");
         return options;
     }
 
