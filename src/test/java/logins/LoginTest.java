@@ -4,8 +4,6 @@ import base.TestBase;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 
-import static org.testng.Assert.assertTrue;
-
 public class LoginTest extends TestBase {
 
     @Test
