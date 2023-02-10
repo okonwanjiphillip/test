@@ -16,9 +16,9 @@ public class OptionsManager extends TestBase {
         options.addArguments("--ignore-certificate-errors");
         options.addArguments("--disable-popup-blocking");
         options.addArguments("--disable-notifications");
-        options.addArguments("--disable-dev-shm-usage");
+//        options.addArguments("--disable-dev-shm-usage");
 //        options.addArguments("--headless");
-        options.addArguments("--remote-debugging-port=9222");
+//        options.addArguments("--remote-debugging-port=9222");
         return options;
     }
 
