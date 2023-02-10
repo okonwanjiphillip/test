@@ -6,15 +6,17 @@ import org.openqa.selenium.WebDriver;
 
 public class LoginPage {
 
-    private WebDriver driver;
-    private By usernameField = By.name("email");
-    private By passwordField = By.name("password");
-    private By loginButton = By.xpath(".//button[contains(@class, 'py-2 px-12') and text()='Login']");
-    private By loginButton1 = By.xpath(".//button[contains(text(),'Login')]");
-    private By emptyEmailError = By.xpath(".//p[contains(text(), 'email is required')]");
+    private final WebDriver driver;
+    private final By usernameField = By.name("email");
+    private final By passwordField = By.name("password");
+    private final By loginButton = By.xpath(".//button[contains(@class, 'py-2 px-12') and text()='Login']");
+    private final By loginButton1 = By.xpath(".//button[contains(text(),'Login')]");
+    private final By emptyEmailError = By.xpath(".//p[contains(text(), 'email is required')]");
     String emptyEmailText = "email is required";
-    private By emptyPasswordError = By.xpath(".//p[contains(text(), 'password is required')]");
+    private final By emptyPasswordError = By.xpath(".//p[contains(text(), 'password is required')]");
     String emptyPasswordText = "password is required";
+    private final By invalidEmailError = By.xpath(".//p[contains(text(), 'email is not valid')]");
+    String invalidEmailText = "email is not valid";
 
     public LoginPage(WebDriver driver){
         this.driver = driver;
@@ -44,5 +46,9 @@ public class LoginPage {
 
     public void assertEmptyPasswordError() {
         TestUtils.assertSearchText(emptyPasswordError, emptyPasswordText);
+    }
+
+    public void assertInvalidEmailError() {
+        TestUtils.assertSearchText(invalidEmailError, invalidEmailText);
     }
 }

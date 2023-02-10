@@ -5,9 +5,12 @@
     <test name="test1">
         <parameter name="user" value=""/>
         <classes>
-            <class name="logins.LoginTest">
+            <class name="tests.LoginTest">
                 <methods>
                     <include name="emptyLoginDetails"/>
+                    <include name="emptyEmailTest"/>
+                    <include name="emptyPasswordTest"/>
+                    <include name="invalidEmailTest"/>
                     <include name="testSuccessfulLogin"/>
                 </methods>
             </class>
