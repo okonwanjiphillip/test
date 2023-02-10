@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.io.File;
 import java.io.FileReader;
@@ -56,7 +57,7 @@ public class TestBase {
         ExtentTest parent = reports.createTest(getClass().getName());
         parentTest.set(parent);
 
-        System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
+        WebDriverManager.chromedriver().setup();
         driver.set(new ChromeDriver(OptionsManager.getChromeOptions()));
         getDriver().manage().window().maximize();
         getDriver().get(myUrl());
