@@ -75,19 +75,19 @@ public class TestUtils extends TestBase{
     /**
      * @description This method clicks on elements and also elements that are overlapped by other elements
      */
-    public static void clickElement(String type, String element) {
-        JavascriptExecutor ex = (JavascriptExecutor) getDriver();
-        WebElement clickThis;
-        TargetTypeEnum targetTypeEnum = TargetTypeEnum.valueOf(type);
-        clickThis = switch (targetTypeEnum) {
-            case ID -> getDriver().findElement(By.id(element));
-            case NAME -> getDriver().findElement(By.name(element));
-            case CSSSELECTOR -> getDriver().findElement(By.cssSelector(element));
-            case XPATH -> getDriver().findElement(By.xpath(element));
-            case CLASSNAME -> getDriver().findElement(By.className(element));
-        };
-        ex.executeScript("arguments[0].click()", clickThis);
-    }
+//    public static void clickElement(String type, String element) {
+//        JavascriptExecutor ex = (JavascriptExecutor) getDriver();
+//        WebElement clickThis;
+//        TargetTypeEnum targetTypeEnum = TargetTypeEnum.valueOf(type);
+//        clickThis = switch (targetTypeEnum) {
+//            case ID -> getDriver().findElement(By.id(element));
+//            case NAME -> getDriver().findElement(By.name(element));
+//            case CSSSELECTOR -> getDriver().findElement(By.cssSelector(element));
+//            case XPATH -> getDriver().findElement(By.xpath(element));
+//            case CLASSNAME -> getDriver().findElement(By.className(element));
+//        };
+//        ex.executeScript("arguments[0].click()", clickThis);
+//    }
 
     /**
      * @description to check if the expected text is present in the page. For the purpose
@@ -157,21 +157,21 @@ public class TestUtils extends TestBase{
     /**
      * @description to scroll to a particular element on the page.
      */
-    public static void scrollToElement(String type, String element) {
-        JavascriptExecutor jse = (JavascriptExecutor) getDriver();
-        WebElement scrollDown = null;
-        TargetTypeEnum targetTypeEnum = TargetTypeEnum.valueOf(type);
-        scrollDown = switch (targetTypeEnum) {
-            case ID -> getDriver().findElement(By.id(element));
-            case NAME -> getDriver().findElement(By.name(element));
-            case CSSSELECTOR -> getDriver().findElement(By.cssSelector(element));
-            case XPATH -> getDriver().findElement(By.xpath(element));
-            case CLASSNAME -> getDriver().findElement(By.className(element));
-        };
-
-        jse.executeScript("arguments[0].scrollIntoView();", scrollDown);
-        TestUtils.getScreenshot();
-    }
+//    public static void scrollToElement(String type, String element) {
+//        JavascriptExecutor jse = (JavascriptExecutor) getDriver();
+//        WebElement scrollDown = null;
+//        TargetTypeEnum targetTypeEnum = TargetTypeEnum.valueOf(type);
+//        scrollDown = switch (targetTypeEnum) {
+//            case ID -> getDriver().findElement(By.id(element));
+//            case NAME -> getDriver().findElement(By.name(element));
+//            case CSSSELECTOR -> getDriver().findElement(By.cssSelector(element));
+//            case XPATH -> getDriver().findElement(By.xpath(element));
+//            case CLASSNAME -> getDriver().findElement(By.className(element));
+//        };
+//
+//        jse.executeScript("arguments[0].scrollIntoView();", scrollDown);
+//        TestUtils.getScreenshot();
+//    }
 
     /*public static void getList() {
         String flag = null;
